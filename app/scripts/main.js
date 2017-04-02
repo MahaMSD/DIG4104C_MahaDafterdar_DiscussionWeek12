@@ -8,14 +8,14 @@ $(document).ready(function() {
   	};
 
   	function slideShow() {
-    	var slideCurrent = $(".slide-active");
+    	var slideCurrent = $('.slide-active');
     	var slideNext = slideCurrent.next();
-    	var dotCurrent = $("li.active");
+    	var dotCurrent = $('li.active');
     	var dotNext = dotCurrent.next();
 
     	if (slideNext.length == 0) {
-      		slideNext = $(".slide").first();
-      		dotNext = $(".slide-indicator li").first();
+      		slideNext = $('.slide').first();
+      		dotNext = $('.slide-indicator li').first();
    	 	}
 
     	var slideIndex = slideNext.index();
@@ -27,7 +27,7 @@ $(document).ready(function() {
     	$('.slide').removeClass('slide-active');
     	slideNext.addClass('slide-active');
 
-    	var captionNext = slideNext.find(".caption");
+    	var captionNext = slideNext.find('.caption');
 
     	$('.slide-indicator li').removeClass('active');
     	dotNext.addClass('active');
@@ -37,17 +37,17 @@ $(document).ready(function() {
   	function parallaxX() {
     	var scrollTop = window.pageYOffset
 
-    	$(window).on("scroll resize", function() {
+    	$(window).on('scroll resize', function() {
       		scrollTop = window.pageYOffset;
     	});
 
-    	$(".slide").each(function() {
+    	$('.slide').each(function() {
       		var parallaxImage = $(this);
       		var parallaxOffset = parallaxImage.offset().top;
       		var yPos;
       		var coords;
 
-      		$(window).on("scroll resize", function() {
+      		$(window).on('scroll resize', function() {
         		yPos = -(parallaxOffset - scrollTop) / 2;
         		coords = '50% ' + yPos + 'px';
 
@@ -91,7 +91,7 @@ $(document).ready(function() {
     
   // };
 
-  $('.slide-indicator li').on("click", function() {
+  $('.slide-indicator li').on('click', function() {
 
     clearInterval(slideStart);
     var goToSlide = $(this).index();
