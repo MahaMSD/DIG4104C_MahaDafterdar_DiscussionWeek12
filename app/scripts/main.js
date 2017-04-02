@@ -111,9 +111,15 @@ $(document).ready(function() {
   parallaxX();
   // siteNav(); 
 
-
-
-
+  //horizontal accordion 
+  var activeSlide = $('.accordion li:first');
+  $(activeSlide).addClass('active');
+  $('.accordion li').hover(function() {
+      $(activeSlide).animate({width: '200px'}, {duration: 'slow', queue: false});
+      $(this).animate({width: '500px'}, {duration: 'slow', queue: false});
+    activeSlide = this;
+    }
+  )
 
 });
 

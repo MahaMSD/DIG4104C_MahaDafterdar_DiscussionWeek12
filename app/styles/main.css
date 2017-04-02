@@ -227,3 +227,107 @@ div#homecont button {
 div#homecont button:hover {
   font-size: 22px;
 }
+
+/* ----- horizontal accordion ------ */
+.container02 {
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.accordion {
+  list-style: none;
+  display: block;
+  overflow: hidden;
+  height: 400px;
+}
+.accordion li {
+  display: inline-block;
+  margin: 0px;
+  width: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  vertical-align: text-top;
+}
+.accordion .active {
+  width: 500px;
+}
+
+
+
+/* media queries for fixing the hieght */
+@media all and (max-width: 992px) {
+  .caption {
+    width: 600px;
+  }
+
+  .caption h1 {
+    font-size: 45px;
+  }
+
+  .caption h1 span#chocid {
+    font-size: 70px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .caption {
+    width: 450px;
+  }
+
+  .caption h1 {
+    font-size: 45px;
+  }
+
+  .caption h1 span#chocid {
+    font-size: 67px;
+  }
+
+  div#homecont h1 {
+    font-size: 65px;
+  }
+
+  div#homecont p {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .caption {
+    width: 400px;
+  }
+
+  .caption h1 {
+    font-size: 40px;
+  }
+
+  .caption h1 span#chocid {
+    font-size: 63px;
+  }
+
+}
+
+@media all and (max-width: 468px) {
+  .caption {
+    width: 350px;
+  }
+
+  .caption h1 {
+    font-size: 40px;
+  }
+
+  .caption h1 span#chocid {
+    font-size: 60px;
+  }
+
+  div#homecont h1 {
+    font-size: 60px;
+  }
+
+  div#homecont p {
+    font-size: 19px;
+  }
+
+}
+
+
