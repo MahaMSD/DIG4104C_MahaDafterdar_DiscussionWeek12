@@ -62,3 +62,168 @@ nav.navbar button {
   padding-top: 12px;
 }
 
+/* ----------------------------------------- index.php --------------------------- */
+body#homebd {
+  background-color: #222222;
+}
+
+/* parallax slider */
+.parallax-slider {
+  position: relative;
+}
+
+.slider-wrapper {
+  white-space: nowrap;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.slide {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  display: inline-block;
+  width: 100%;
+  height: 600px;
+  flex-shrink: 0;
+  transition: 0.9s ease-in-out transform;
+  backface-visibility: hidden;
+}
+
+.slide-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.slide-indicator ol {
+  display: inline-block;
+}
+.slide-indicator li {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.slide-indicator li:hover {
+  background: #f16876;
+}
+
+.slide-indicator li.active {
+  background: #f16876;
+}
+
+.slide::before {
+  content: '';
+  display: inline-block;
+  height: 50%;
+}
+
+.content {
+  display: inline-block;
+  width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  white-space: normal;
+  color: #fff;
+  transform: translate(-5px);
+}
+
+.caption {
+  padding: 15px;
+  transition: 0.4s;
+  transition-delay: 0.8s;
+  opacity: 0;
+  transform: translatey(200%);
+  margin-top: 265px;
+  width: 700px;
+}
+.caption h1 {
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px #000000;
+}
+
+.caption h1 span#chocid {
+  font-family: 'Mr De Haviland', cursive;
+  color: #D90429;
+  font-size: 80px;
+}
+
+.slide-active .caption {
+  transform: translatey(0);
+  opacity: 1;
+}
+
+/*.home {
+  height: 1000px;
+  position: relative;
+}*/
+
+.slide1 {
+  background: url("../images/slider01.jpg") top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide2 {
+  background: url("../images/slider02.jpg") top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide3 {
+  background: url("../images/slider03.jpg") top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div#homecont {
+  text-align: center;
+}
+
+div#homecont h1 {
+  font-family: 'Orbitron', sans-serif;
+  /*color: #D90429;*/
+  /*color: #1351d8;*/ /*Ford Color */
+  color: #a1a1a1;
+  font-size: 45px;
+  padding-bottom: 10px;
+}
+
+div#homecont p {
+  color: #efefef;
+  font-size: 20px;
+  line-height: 35px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-weight: 300;
+}
+
+div#homecont button {
+  font-size: 20px;
+  color: #fffffa;
+  background-color: #999999;
+  border: none;
+  box-shadow: 3px 3px 7px #aaaaaa;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-right: 10px;
+}
+
+div#homecont button:hover {
+  font-size: 22px;
+}
